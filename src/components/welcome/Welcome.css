@@ -1,0 +1,36 @@
+
+.welcome{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.welcome__banner{
+    width: 50%;
+    background-color: #d34a4a;
+}
+
+.welcome__text{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcome__text h1{
+    margin: 10px;
+}
+
+.welcome__text h2{
+    margin: 10px;
+}
+
+.welcome__button{
+    background: #d34a4a;
+    margin: 20px;
+}
+
+.welcome__button:hover{
+    background: #f21852;
+}
