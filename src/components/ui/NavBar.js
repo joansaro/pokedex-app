@@ -10,7 +10,6 @@ export const NavBar = () => {
         });
     }
 
-    // 
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
