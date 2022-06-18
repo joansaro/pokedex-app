@@ -7,7 +7,7 @@ export const WelcomeScreen = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    navigate('/pokedex', {
+    navigate('/Primera-Generacion', {
       replace: true
     })
   };

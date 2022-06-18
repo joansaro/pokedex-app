@@ -1,116 +1,54 @@
 import React from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+
+import * as FaIcons from 'react-icons/fa'
+import * as AiIcons from 'react-icons/ai'
+
+
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { SidebarData } from './SidebarData'
+import { IconContext } from 'react-icons'
+
+import './Navbar.css'
+
+
 
 export const NavBar = () => {
-    const navigate = useNavigate();
+    const [sidebar, setSidebar] = useState(false)
 
-    const handleLogout = () => {
-        navigate('/welcome', {
-            replace: true
-        });
-    }
-
+    const showSidebar = () => setSidebar(!sidebar);
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
+        <div>
 
-                <Link
-                    className="navbar-brand"
-                    to="/"
-                >
-                    Asociaciones
-                </Link>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <div className="navbar-nav">
-
-                        <NavLink
-                            className={({ isActive }) => "nav-item nav-link" + (isActive ? " active" : "")}
-                            to="/primera-generacion"
-                        >
-                            Primera
-                        </NavLink>
-
-
-                        <NavLink
-                            className={({ isActive }) => "nav-item nav-link" + (isActive ? " active" : "")}
-                            to="/segunda-generacion"
-                        >
-                            Segunda
-                        </NavLink>
-
-                        <NavLink
-                            className={({ isActive }) => "nav-item nav-link" + (isActive ? " active" : "")}
-                            to="/tercera-generacion"
-                        >
-                            Tercera
-                        </NavLink>
-
-                        <NavLink
-                            className={({ isActive }) => "nav-item nav-link" + (isActive ? " active" : "")}
-                            to="/cuarta-generacion"
-                        >
-                            Cuarta
-                        </NavLink>
-
-                        <NavLink
-                            className={({ isActive }) => "nav-item nav-link" + (isActive ? " active" : "")}
-                            to="/quinta-generacion"
-                        >
-                            Quinta
-                        </NavLink>
-
-                        <NavLink
-                            className={({ isActive }) => "nav-item nav-link" + (isActive ? " active" : "")}
-                            to="/sexta-generacion"
-                        >
-                            Sexta
-                        </NavLink>
-
-                        <NavLink
-                            className={({ isActive }) => "nav-item nav-link" + (isActive ? " active" : "")}
-                            to="/septima-generacion"
-                        >
-                            Septima
-                        </NavLink>
-
-                        <NavLink
-                            className={({ isActive }) => "nav-item nav-link" + (isActive ? " active" : "")}
-                            to="/octava-generacion"
-                        >
-                            Octava
-                        </NavLink>
-
-                        <NavLink
-                            className={({ isActive }) => "nav-item nav-link" + (isActive ? " active" : "")}
-                            to="/buscar"
-                        >
-                            Search
-                        </NavLink>
-                    </div>
-
-                <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
-                    <ul className="navbar-nav ml-auto">
-                        <span className='nav-item nav-link text-info'>
-                            Joansaro
-                        </span>
-                        <button
-                            className="nav-item nav-link btn"
-                            onClick={handleLogout}
-                        // exact
-                        >
-                            Logout
-                        </button>
-                    </ul>
+            <IconContext.Provider value={{ color: '#fff' }}>
+                <div className='navbar'>
+                    <Link to='#' className='menu-bars'>
+                        <FaIcons.FaBars onClick={showSidebar} />
+                    </Link>
                 </div>
-            </div>
-            </div>
-
-        </nav>
+                <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                    <ul className='nav-menu-items' onClick={showSidebar}>
+                        <li className='navbar-toggle'>
+                            <Link to='#' className='menu-bars'>
+                                <AiIcons.AiOutlineClose />
+                            </Link>
+                        </li>
+                        {
+                            SidebarData.map((item, index) => {
+                                return (
+                                    <li key={index} className={item.cName}>
+                                        <Link to={item.path}>
+                                            {item.icon}
+                                            <span>{item.title}</span>
+                                        </Link>
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </nav>
+            </IconContext.Provider>
+        </div>
     )
 }

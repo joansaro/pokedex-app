@@ -7,7 +7,7 @@
 
 .welcome__banner{
     width: 50%;
-    background-color: #d34a4a;
+    background-color: #1a83ff;
 }
 
 .welcome__text{
@@ -27,10 +27,10 @@
 }
 
 .welcome__button{
-    background: #d34a4a;
+    background: #1a83ff;
     margin: 20px;
 }
 
 .welcome__button:hover{
-    background: #f21852;
+    background: #060b26;
 }

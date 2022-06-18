@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.title::first-letter{
+    text-transform: uppercase;
+}
+
 /* .pokemon__container{
     width: 100%;
     background-color: rgb(253, 253, 253);
@@ -75,7 +79,8 @@
 }
 
 .pokemon__feature span{
-    font-size: 14px;
+    font-size: 13px;
+    text-align: center;
 }
 
 

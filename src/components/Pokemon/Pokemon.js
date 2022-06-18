@@ -15,7 +15,7 @@ const Pokemon = (props) => {
           </div>
           <div className='pokemon__info'>
             <div className='pokemon__text'>
-              <h2>{pokemon.name}</h2>
+              <h2 className='pokemon__name'>{pokemon.name}</h2>
             </div>
             <div
               className={
