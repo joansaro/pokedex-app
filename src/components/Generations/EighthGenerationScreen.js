@@ -1,4 +1,3 @@
-// import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { getPokemonData, getPokemons } from '../../helpers/Api';
 import Pokedex from '../Pokedex/Pokedex';

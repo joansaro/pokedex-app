@@ -5,8 +5,6 @@ import './Pokemon.css'
 const Pokemon = (props) => {
   const { pokemon } = props;
   return (
-    // <div className="pokemon">
-    //   <div className="pokemon__container">
         <div
           className='pokemon__card'
         >
@@ -45,7 +43,6 @@ const Pokemon = (props) => {
               </div>
               <div
                 className="pokemon__feature"
-              // pokemon.types[0].type.name === 'fire' ? 'pokemon__feature fire' : 'normal'}
               >
                 <p>Tipo</p>
                 <span>{pokemon.types[0].type.name}</span>
@@ -54,8 +51,7 @@ const Pokemon = (props) => {
 
           </div>
         </div>
-    //   </div>
-    // </div>
+
   )
 }
 

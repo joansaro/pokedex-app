@@ -1,17 +1,5 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-// import { FirstGenerationScreen } from '../components/FirstGeneration/FirstGenerationScreen'
-// import { PokeScreen } from '../components/Pokes/PokeScreen'
-// import { Pokedex } from '../components/Pokedex/Pokedex'
-// import { SecondGenerationScreen } from '../components/SecondGeneration/SecondGenerationScreen'
-// import { ThirdGenerationScreen } from '../components/ThirdGeneration/ThirdGenerationScreen'
-// import { QuarterGenerationScreen } from '../components/QuarterGeneration/QuarterGenerationScreen'
-// import { FifthGenerationScreen } from '../components/FifthGeneration/FifthGenerationScreen'
-// import { SixthGenerationScreen } from '../components/SixthGeneration/SixthGenerationScreen'
-// import { SeventhGenerationScreen } from '../components/SeventhGeneration/SeventhGenerationScreen'
-// import { EighthGenerationScreen } from '../components/EighthGeneration/EighthGenerationScreen'
-// import SecondGenerationScreen from '../components/SecondGeneration/SecondGenerationScreen'
-// import FirstGenerationScreen from '../components/FirstGeneration/FirstGenerationScreen'
 
 // import Pokedex from '../components/Pokedex/Pokedex'
 import FirstGenerationScreen from '../components/Generations/FirstGenerationScreen'
@@ -41,8 +29,8 @@ export const DashboarsRoutes = () => {
                 <Route path="/sexta-generacion" element={<SixthGenerationScreen />} />
                 <Route path="/septima-generacion" element={<SeventhGenerationScreen />} />
                 <Route path="/octava-generacion" element={<EighthGenerationScreen />} />
+                
                 <Route path="/buscar" element={<SearchScreen />} />
-                {/* <Route path="/poke" element={<PokeScreen />} /> */}
 
                 <Route path="/" element={<FirstGenerationScreen />} />
             </Routes>
