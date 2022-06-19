@@ -7,7 +7,7 @@ export const WelcomeScreen = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    navigate('/Primera-Generacion', {
+    navigate('/primera-generacion', {
       replace: true
     })
   };
